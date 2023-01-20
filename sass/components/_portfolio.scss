@@ -1,0 +1,98 @@
+
+.project-cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1*var(--project-card-gap));
+    margin-top: calc(-1*var(--project-card-gap));
+}
+
+.project-card {
+    flex-basis: calc(100% - 30px);
+    background-color: var(--color-action-primery);
+    border: 1px solid var(--color-button-border);
+    margin-left: var(--project-card-gap);
+    margin-top: var(--project-card-gap);
+    transition-property: box-shadow;
+    transition-duration: var(--action-duration);
+    transition-timing-function: var(--cubic-bezier);
+
+    @media (min-width: 678px) {
+        flex-basis: calc(100%/2 - 30px);
+    }
+
+    @media (min-width: 1200px) {
+        flex-basis: calc(100%/3 - 30px);
+    }
+
+    &__item {
+            position: relative;
+            overflow: hidden;
+        }
+    
+    &__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateY(101%);
+            transition-property: transform;
+            transition-duration: var(--action-duration);
+            transition-timing-function: var(--cubic-bezier);
+            padding: 10px 15px;
+            color: var(--color-action-primery);
+            background-color: rgba(33, 150, 243, 0.9);
+
+            @media (min-width: 480px) {
+                    padding: 77px 24px;
+                }
+
+            @media (min-width: 678px) {
+                padding: 49px 24px 77px;
+            }
+
+            @media (min-width: 1200px) {
+                padding: 63px 24px;
+            }
+        }
+    
+    &__overlay-text {
+            font-size: 16px;
+            line-height: 1.56;
+            letter-spacing: 0.03em;
+
+            @media (min-width: 480px) {
+                font-size: 18px;
+                line-height: 1.56;
+            }
+        }
+    &__title {
+            font-size: 18px;
+            line-height: 2;
+            letter-spacing: 0.06em;
+            margin-bottom: 4px;
+        }
+    
+    &__type {
+            font-size: 16px;
+            line-height: 1.88;
+            letter-spacing: 0.03em;
+            color: var(--color-secondary);
+            margin-bottom: 0;
+        }
+    
+    &:hover &__overlay,
+    &:focus &__overlay {
+            transform: translateY(0);
+        }
+    
+    &:hover,
+    &:focus {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
+}
+
+.thumb {
+    padding: 20px 24px;
+}
+

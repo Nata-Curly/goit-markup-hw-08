@@ -1,0 +1,202 @@
+
+// Форма "Замовити послугу"
+
+.user-form {
+    width: 100%;
+    max-height: 342px;
+
+    &__field {
+            position: relative;
+            /* margin-bottom: 10px; */
+            margin: 2px 0 7px 0;
+        }
+    
+    &__field-label {
+            font-size: 12px;
+            line-height: 1.167;
+            color: var(--color-secondary);
+        }
+    
+    &__field-input {
+            width: 100%;
+            height: 40px;
+            padding: 0 12px 0 42px;
+            border: 1px solid rgba(33, 33, 33, 0.2);
+            border-radius: 4px;
+            outline: none;
+            transition-property: border-color;
+            transition-duration: var(--action-duration);
+            transition-timing-function: var(--cubic-bezier);
+
+            &:focus {
+                    border-color: var(--color-action-secondary);
+                }
+        }
+    
+    &__field-textarea {
+            width: 100%;
+            height: 120px;
+            padding: 12px 16px;
+            /* margin-bottom: 20px; */
+            margin: 2px 0 17px 0;
+            border: 1px solid rgba(33, 33, 33, 0.2);
+            border-radius: 4px;
+            outline: none;
+            resize: none;
+            transition-property: border-color;
+            transition-duration: var(--action-duration);
+            transition-timing-function: var(--cubic-bezier);
+
+            &:focus {
+                    border-color: var(--color-action-secondary);
+                }
+
+            &::placeholder {
+                    font-size: 14px;
+                    line-height: 1.143;
+                    letter-spacing: 0.01em;
+                    color: rgba(117, 117, 117, 0.5);
+
+                    @media (min-width: 1200px) {
+                            font-size: 12px;
+                            line-height: 1.167;
+                        }
+                }
+        }
+    &__field-icon {
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            transform: translateY(-50%);
+            transition-property: fill;
+            transition-duration: v(--action-duration);
+            transition-timing-function: v(--cubic-bezier);
+        }
+
+    &__field-input:focus + &__field-icon {
+            fill: var(--color-action-secondary);
+        }
+            
+}
+
+
+.checkbox {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-left: 12px;
+    margin-bottom: 30px;
+
+    &__input {
+            appearance: none;
+        }
+    
+    &__label {
+            position: relative;
+            padding-left: 24px;
+            font-size: 12px;
+            line-height: 1.167;
+            letter-spacing: 0.03em;
+            color: var(--color-secondary);
+
+            @media (min-width: 1200px) {
+                font-size: 14px;
+                line-height: 1.714;
+            }
+        }
+    
+    &__icon {
+            position: absolute;
+            fill: transparent;
+            border: 2px solid var(--color-primery);
+            border-radius: 2px;
+        }
+
+    &__input:checked + &__icon {
+            fill: var(--color-action-primery);
+            background-color: var(--color-action-secondary);
+            border-color: var(--color-action-secondary);
+        }
+}
+
+.terms-ref {
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.03em;
+    color: var(--color-action-secondary);
+
+    @media (min-width: 1200px) {
+            font-size: 14px;
+            line-height: 1.714;
+        }
+}
+
+// Форма футера "Підпишіться на розсилку"
+
+.subscribe-form {
+    position: relative;
+    @extend %flex-cented;
+    flex-direction: column;
+    
+    @media (min-width: 1200px) {
+        margin-left: 23px;
+        margin-bottom: 34px;
+    }
+
+    &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            gap: 20px;
+
+        @media (min-width: 1200px) {
+            flex-direction: row;
+            gap: 12px;
+        }
+
+        }
+    
+    &__title {
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: var(--color-action-primery);
+            margin-bottom: 20px;
+            
+        @media (min-width: 1200px) {
+            margin: 0 363px 20px 0;
+        }
+        }
+    
+    &__input {
+            width: 290px;
+            height: 50px;
+            padding-left: 16px;
+            color: rgba(255, 255, 255, 0.6);
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+            border-radius: 4px;
+            outline: none;
+
+            @media (min-width: 480px) {
+                width: 450px;
+            }
+
+            @media (min-width: 1200px) {
+                width: 358px;
+            }
+    
+            &::placeholder {
+                font-size: 16px;
+                line-height: 1.25;
+                letter-spacing: 0.03em;
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }
+
+}
+
+

@@ -1,0 +1,35 @@
+
+.clients {
+    @extend %flex-cented;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__title {
+            @include section-title;
+        }
+        
+    &__link {
+            @extend %flex-cented;
+            width: 210px;
+            height: 92px;
+            border: 1px solid var(--color-icon-primary);
+            border-radius: 4px;
+            fill: var(--color-icon-primary);
+            transition-property: fill border-color;
+            transition-duration: var(--action-duration);
+            transition-timing-function: var(--cubic-bezier);
+    
+            &:hover,
+            &:focus {
+                fill: var(--color-action-secondary);
+                border-color: var(--color-action-secondary);
+            }
+        @media (min-width: 768px) {
+            width: 226px;
+            }
+        @media (min-width: 1200px) {
+            width: 170px;       
+            }
+        }
+}
+

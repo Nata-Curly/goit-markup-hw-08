@@ -1,0 +1,104 @@
+
+// Соціальні мережі членів команди
+
+.socials {
+    @extend %flex-cented;
+    gap: 10px;
+
+    &__item {
+            width: 44px;
+            height: 44px;
+        }
+    
+    &__link {
+            @extend %flex-cented;
+            width: 100%;
+            height: 100%;
+            fill: var(--color-icon-primary);
+            border-radius: 50%;
+            transition-property: fill background-color;
+            transition-duration: var(--action-duration);
+            transition-timing-function: var(--cubic-bezier);
+
+            &:hover,
+            &:focus {
+                    fill: var(--color-action-primery);
+                    background-color: var(--color-action-secondary);
+                }
+        }
+}
+
+
+
+// Соціальні мережі у футері
+
+.join {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    @media (min-width: 768px) {
+        margin-bottom: 35px;
+    }
+    
+    @media (min-width: 1200px) {
+        margin-bottom: 40px;
+    }
+
+    &__title {
+            font-size: 14px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: var(--color-action-primery);
+            margin-bottom: 20px;
+            
+        @media (min-width: 1200px) {
+                margin: 0 90px 20px 0;
+                }
+        }
+      
+    &__socials-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            fill: var(--color-action-primery);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition-property: fill background-color;
+            transition-duration: var(--action-duration);
+            transition-timing-function: var(--cubic-bezier);
+
+            &:hover,
+            &:focus {
+                    fill: var(--color-action-primery);
+                    background-color: var(--color-action-secondary);
+                }
+        }
+}
+
+// Соціальні мережі у у мобільному меню
+
+.menu-socials {
+        display: flex;
+        
+        @media (max-width: 479px) {
+                flex-wrap: wrap;
+        }
+        
+        &__item {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        padding-right: 10px;
+        margin-right: 10px;
+        color: var(--color-action-secondary);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+
+                &:last-child {
+                border: none;
+                }
+        }
+}
