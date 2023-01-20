@@ -7,14 +7,11 @@
     }
 
     &__list {
-
-        @media (min-width: 768px) {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 30px;
-            }
-
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;    
+        
         @media (min-width: 1200px) {
             flex-wrap: nowrap;
             }
