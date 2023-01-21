@@ -1,8 +1,12 @@
 
 .team {
-    padding: 94px 0;
+    padding: 60px 0;
     background-color: var(--color-background-secondary);
 
+    @media (min-width: 1200px) {
+        padding: 94px 0;
+    }
+    
     &__section-title {
         @include section-title;
     }

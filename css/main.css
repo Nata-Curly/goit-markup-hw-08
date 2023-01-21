@@ -143,8 +143,8 @@ p {
 
 .burger {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 6px;
+  right: 8px;
   background-color: var(--color-action-primery);
 }
 .burger__icon:hover, .burger__icon:focus {
@@ -158,8 +158,8 @@ p {
 
 .close-menu-button {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 21px;
+  right: 25px;
   background-color: var(--color-action-primery);
 }
 .close-menu-button__icon:hover, .close-menu-button__icon:focus {
@@ -370,12 +370,16 @@ p {
   }
 }
 .feature__title {
-  text-align: center;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .feature__title {
+    text-align: center;
+  }
 }
 .feature__text {
   font-size: 14px;
@@ -574,6 +578,13 @@ p {
   letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
+@media (max-width: 1199px) {
+  .clients__title {
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 30px;
+  }
+}
 .clients__link {
   width: 210px;
   height: 92px;
@@ -603,8 +614,13 @@ p {
 }
 
 .team {
-  padding: 94px 0;
+  padding: 60px 0;
   background-color: var(--color-background-secondary);
+}
+@media (min-width: 1200px) {
+  .team {
+    padding: 94px 0;
+  }
 }
 .team__section-title {
   font-size: 36px;
@@ -612,6 +628,13 @@ p {
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 50px;
+}
+@media (max-width: 1199px) {
+  .team__section-title {
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 30px;
+  }
 }
 .team__cards-list {
   display: -webkit-box;
@@ -919,6 +942,13 @@ p {
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 50px;
+}
+@media (max-width: 1199px) {
+  .what-we-do__title {
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 30px;
+  }
 }
 .what-we-do__list {
   display: -webkit-box;
@@ -1341,6 +1371,7 @@ p {
   }
 }
 .header__container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1482,6 +1513,12 @@ p {
   color: var(--color-action-secondary);
   fill: var(--color-action-secondary);
 }
+@media (max-width: 1199px) {
+  .header__mailto, .header__tel {
+    font-size: 12px;
+    line-height: 1.167;
+  }
+}
 .header__mailto-icon, .header__tel-icon {
   fill: currentColor;
   -webkit-transition-property: fill;
@@ -1494,6 +1531,16 @@ p {
 .header__mailto-icon:hover, .header__mailto-icon:focus, .header__mailto-icon:active, .header__tel-icon:hover, .header__tel-icon:focus, .header__tel-icon:active {
   color: var(--color-action-secondary);
   fill: var(--color-action-secondary);
+}
+@media (max-width: 1199px) {
+  .header__mailto-icon {
+    width: 14px;
+  }
+}
+@media (max-width: 1199px) {
+  .header__tel-icon {
+    height: 14px;
+  }
 }
 
 .backdrop {
@@ -1581,5 +1628,10 @@ p {
 
 .section {
   background-color: inherit;
-  padding: 94px 0;
+  padding: 60px 0;
+}
+@media (min-width: 1200px) {
+  .section {
+    padding: 94px 0;
+  }
 }/*# sourceMappingURL=main.css.map */

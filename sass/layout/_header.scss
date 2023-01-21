@@ -14,6 +14,7 @@
     }
 
     &__container {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -114,6 +115,11 @@
                 color: var(--color-action-secondary);
                 fill: var(--color-action-secondary);
             }
+
+            @media (max-width: 1199px) {
+                font-size: 12px;
+                line-height: 1.167;
+            }
         }
     
     &__mailto-icon,
@@ -131,4 +137,16 @@
                 }
         }
 
+    &__mailto-icon {
+        @media (max-width: 1199px) {
+            width: 14px;
+        }
+    }
+
+    &__tel-icon {
+        @media (max-width: 1199px) {
+            height: 14px;
+        }
+    }
+    
 }

@@ -37,13 +37,16 @@
             }
         }
     
-    &__title {
-        text-align: center;
+    &__title {            
             font-size: 14px;
             line-height: 1.14;
             letter-spacing: 0.03em;
             text-transform: uppercase;
             margin-bottom: 10px;
+
+            @media (max-width: 767px) {
+                text-align: center;
+            }
         }
     
     &__text {
